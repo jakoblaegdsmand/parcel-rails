@@ -20,13 +20,13 @@ namespace :parcel do
 
   desc 'Cleans up old builds'
   task :clean do
-    puts "doing nothing"
+    logger.info("-- parcel:clean, doing nothing --")
   end
 
   task :clean_cache do
     logger = Logger.new(STDOUT)
-    logger.info("removing .cache")
-    FileUtils.rm_rf(".cache")
+    logger.info("removing #{::Rails.application.config.parcel.cache_directory}")
+    FileUtils.rm_rf(::Rails.application.config.parcel.cache_directory)
   end
 end
 
