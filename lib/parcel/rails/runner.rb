@@ -17,7 +17,7 @@ module Parcel
         args << "--out-dir=#{config.destination}" if config.destination
         args << "--public-url=#{config.public_url}" if config.public_url
         args << "--experimental-scope-hoisting" if config.scope_hoisting
-        args << "--cache-dir" if config.cache_directory
+        args << "--cache-dir=#{config.cache_directory}" if config.cache_directory
         args << "--port=1234"
         args << "--hmr-port=6877"
         new(args)

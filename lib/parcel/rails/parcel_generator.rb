@@ -8,10 +8,10 @@ class ParcelGenerator < ::Rails::Generators::Base
     initializer 'parcel.rb' do
       %{Rails.application.configure do
   config.parcel.entry_points = %w(app/javascript/application.js)
-  config.parcel.destination = 'public/parcels'
-  config.parcel.public_url = '/parcels'
+  config.parcel.destination = "public/parcels"
+  config.parcel.public_url = "/parcels"
   config.parcel.scope_hoisting = Rails.env.production?
-  config.parcel.cache_directory = Rails.root.join("tmp", "cache", "parcel")
+  config.parcel.cache_directory = "tmp/cache/parcel"
 end}
     end
   end

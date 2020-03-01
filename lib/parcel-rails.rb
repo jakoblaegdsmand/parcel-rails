@@ -24,7 +24,7 @@ module Parcel
         config.parcel = ActiveSupport::OrderedOptions.new
         config.parcel.entry_points = %w[app/javascript/application.js]
         config.parcel.destination = 'public/parcels'
-        config.parcel.cache_directory = Rails.root.join("tmp", "cache", "parcel")
+        config.parcel.cache_directory = "tmp/cache/parcel"
         config.parcel.public_url = '/parcels'
         config.parcel.scope_hoisting = false
       end
