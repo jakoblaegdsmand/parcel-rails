@@ -41,7 +41,7 @@ module Parcel
         args = cmd == :build ? @args[0..-3] : @args
         command = "yarn run parcel #{cmd} #{args.join(' ')}"
         puts command
-        puts `#{command}`
+        system(command)
       end
     end
   end
