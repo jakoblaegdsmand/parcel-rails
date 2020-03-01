@@ -12,7 +12,6 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Rails integration of parceljs bundler'
   spec.description   = 'Rails integration of parceljs bundler'
-  spec.homepage      = 'http://github.com/michaldarda/parcel-rails'
   spec.license       = 'UNLICENSED'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
