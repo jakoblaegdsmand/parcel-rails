@@ -21,7 +21,7 @@ namespace :parcel do
   desc 'Cleans up old builds'
   task :clean do
     logger = Logger.new(STDOUT)
-    logger.info("-- parcel:clean, doing nothing --")
+    logger.info('-- parcel:clean, doing nothing --')
   end
 
   task :clean_cache do
@@ -32,7 +32,7 @@ namespace :parcel do
 end
 
 namespace :assets do
-  task :precompile => ["parcel:clobber", "parcel:clean_cache", "parcel:compile"]
-  task :clobber => ['parcel:clobber']
-  task :clean => ['parcel:clean']
+  task precompile: ['parcel:clobber', 'parcel:clean_cache', 'parcel:compile']
+  task clobber: ['parcel:clobber']
+  task clean: ['parcel:clean']
 end

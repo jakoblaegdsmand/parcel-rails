@@ -1,11 +1,12 @@
 AllCops:
   Exclude:
-    - 'examples/**/*'
+    - "examples/**/*"
 
-Metrics/LineLength:
-  Exclude:
-    - 'parcel-rails.gemspec'
+Layout:
+  Metrics/LineLength:
+    Exclude:
+      - "parcel-rails.gemspec"
 
 Naming/FileName:
   Exclude:
-    - 'lib/parcel-rails.rb'
+    - "lib/parcel-rails.rb"
