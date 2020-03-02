@@ -21,7 +21,7 @@ namespace :parcel do
   desc 'Cleans up old builds'
   task :clean do
     logger = Logger.new(STDOUT)
-    logger.info('-- parcel:clean, doing nothing --')
+    logger.info('parcel:clean, doing nothing')
   end
 
   task :clean_cache do

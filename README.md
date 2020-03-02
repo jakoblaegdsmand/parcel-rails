@@ -1,8 +1,10 @@
 # Integration of Parcel in Rails 5 without sprockets
 
+## WARNING:
+
 This gem is an experiment to integrate parcel into rails without using sprockets at all.
 
-This repository is not for public usage. It is created specifically for a project.
+This repository is not for public usage. It is created specifically for a project. If you use it, you do it at your own risk.
 
 ## Disclaimer
 
