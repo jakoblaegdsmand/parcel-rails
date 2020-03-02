@@ -32,7 +32,7 @@ namespace :parcel do
 end
 
 namespace :assets do
-  task precompile: ['parcel:clobber', 'parcel:clean_cache', 'parcel:compile']
+  task precompile: ['parcel:compile']
   task clobber: ['parcel:clobber']
   task clean: ['parcel:clean']
 end
