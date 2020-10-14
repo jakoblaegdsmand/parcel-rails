@@ -5,6 +5,7 @@ module Parcel
     class Runner
       def self.from_command_line(args)
         return from_config if args.empty?
+
         new(args)
       end
 
@@ -16,10 +17,12 @@ module Parcel
         args = config.entry_points
         args << "--out-dir=#{config.destination}" if config.destination
         args << "--public-url=#{config.public_url}" if config.public_url
-        args << "--experimental-scope-hoisting" if config.scope_hoisting
-        args << "--cache-dir=#{config.cache_directory}" if config.cache_directory
-        args << "--port=1234"
-        args << "--hmr-port=6877"
+        args << '--experimental-scope-hoisting' if config.scope_hoisting
+        if config.cache_directory
+          args << "--cache-dir=#{config.cache_directory}"
+        end
+        args << '--port=1234'
+        args << '--hmr-port=6877'
         new(args)
       end
 
